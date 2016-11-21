@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>顺行</title>
+    <meta name="keywords" content="个人博客, 技术分享" />
+    <meta name="description" content="顺行个人博客，是一个专注于技术分享的博客。" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/web.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+    <div class="banner">
+        <div class="carousel-inner">
+            <div class="item active ">
+                <img class="img" alt="" src="images/head.png" />
+
+            </div>
+
+        </div>
+        <div class="websiteDescription">
+            <h2>天空没有翅膀的痕迹但我已飞过</h2>
+            <p>  不要沮丧，不必惊慌，做努力爬的蜗牛或坚持飞的笨鸟，我们试着长大，一路跌跌撞撞，然后遍体鳞伤。坚持着，总有一天，你会站在最亮的地方，活成自己曾经渴望的模样。</p>
+        </div>
+    </div>
+    <header>
+        <h1 id="logo"><a href="/"><img src="images/shunxing.png" width="260" height="60" alt="杨青个人博客"></a></h1>
+        <nav>
+            <ul class="">
+                <li id="active"><a href="index.html">首页</a></li>
+                | <li><a href="interlocution.html">有问必答</a></li>
+                |<li><a href="knowledge.html">技术分享</a></li>
+                |<li><a href="resource.html">资源分享</a></li>
+                |<li><a href="fastrack.html">成神之路</a></li>
+                |<li><a href="journaling.html">生活日记</a></li>
+                |<li><a href="message.html">留言建议</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="text-center">顺行博客专门做技术分享的博客，在这里我们可以畅所欲言,提出你的看法，也可以提出你的看法哦</div>
+        <p class="text-center">感谢大家的支持，希望大家多提建议我们会做的更好</p>
+
+        <textarea class="form-control col-sm-6" rows="5" ng-model="message" cols="40" rows="10"></textarea>
+        <div class="conter"style="width: 200px;">
+            <button class="conter btn btn-default">提交</button>
+            <button class=" btn btn-default">清除</button>
+        </div>
+
+    </div>
+    <footer>
+        <ul>
+            版权所有 <a href="/" title="顺行个人博客">顺行制作</a>
+        </ul>
+    </footer>
+</div>
+<script>
+    window.onload = function ()
+    {
+        var oLi = document.getElementById("tab").getElementsByTagName("li");
+        var oUl = document.getElementById("ms-main").getElementsByTagName("div");
+
+        for(var i = 0; i < oLi.length; i++)
+        {
+            oLi[i].index = i;
+            oLi[i].onmouseover = function ()
+            {
+                for(var n = 0; n < oLi.length; n++) oLi[n].className="";
+                this.className = "cur";
+                for(var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+                oUl[this.index].style.display = "block"
+            }
+        }
+    }
+</script>
+</body>
+</html>

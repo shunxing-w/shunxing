@@ -1,0 +1,16 @@
+.bloglist ul li{
+    border: 1px solid #cccccc;
+    margin: 10px 0px 0px 10px;
+    float: left;
+}
+.bloglist ul li span{
+    text-align: center;
+    display: block;
+}
+.bloglist ul li img{
+    width: 138px;
+    height: 138px;
+}
+.conter{
+    margin: 0 auto;
+}
